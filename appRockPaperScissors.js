@@ -24,7 +24,7 @@ const getComputerChoice = () => {
       break;
 
   }
-}
+};
 
 const determineWinner = (userChoice,computerChoice) => {
   if ((userChoice == "rock" && computerChoice == "scissors")||(userChoice == "paper" && computerChoice == "rock")||(userChoice == "scissors" && computerChoice == "paper")) {
@@ -36,5 +36,10 @@ const determineWinner = (userChoice,computerChoice) => {
   } else {
     console.log("ERROR:Verify getComputerChoice or getUserChoice Functions");
   }
+};
+//playGame = () => {}; 
+//function playGame() {} 
+const playGame = () => {
+  let userChoice = getUserChoice("paper");
+  let computerChoice = getComputerChoice();
 }
-
