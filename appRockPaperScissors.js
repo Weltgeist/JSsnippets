@@ -43,7 +43,7 @@ const playGame = () => {
   let userChoice = getUserChoice("paper");
   let computerChoice = getComputerChoice();
   console.log(`You choose : ${userChoice}\nComputer choose :  ${computerChoice}`);
-  console.log(`You ${determineWinner(userChoice,computerChoice)} the game!`);
+  (userChoice=="bomb")?console.log("You Win life, obviously, you also win the game."):console.log(`You ${determineWinner(userChoice,computerChoice)} the game!`);
 }
 
 playGame();
