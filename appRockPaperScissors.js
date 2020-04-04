@@ -25,3 +25,15 @@ const getComputerChoice = () => {
 
   }
 }
+
+const determineWinner = (userChoice,computerChoice) => {
+  if ((userChoice == "rock" && computerChoice == "scissors")||(userChoice == "paper" && computerChoice == "rock")||(userChoice == "scissors" && computerChoice == "paper")) {
+    return "Win"
+  } else if ((computerChoice == "rock" && userChoice == "scissors")||(computerChoice == "paper" && userChoice == "rock")||(computerChoice == "scissors" && userChoice == "paper")) {
+    return "Lost"
+  } else if (computerChoice==userChoice) {
+    return "Tied"
+  } else {
+    console.log("ERROR:Verify getComputerChoice or getUserChoice Functions");
+  }
+}
