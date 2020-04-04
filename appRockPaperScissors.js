@@ -1,6 +1,6 @@
 const getUserChoice = userInput => { 
   userInput = userInput.toLowerCase();
-  if (userInput==="rock" || userInput==="paper" || userInput==="scissors"){
+  if (userInput==="rock" || userInput==="paper" || userInput==="scissors"|| userInput==="bomb"){
     return userInput;
   } else {
     console.log("ERROR:Input must be either rock,paper or scissor string input.");
