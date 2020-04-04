@@ -7,4 +7,3 @@ const getUserChoice = userInput => {
   }
 };
 
-getUserChoice("rock");
