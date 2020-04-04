@@ -6,3 +6,5 @@ const getUserChoice = userInput => {
     console.log("ERROR:Input must be either rock,paper or scissor string input.");
   }
 };
+
+getUserChoice("rock");
