@@ -38,4 +38,3 @@ const determineWinner = (userChoice,computerChoice) => {
   }
 }
 
-console.log(determineWinner(getUserChoice("paper"),getComputerChoice()));
