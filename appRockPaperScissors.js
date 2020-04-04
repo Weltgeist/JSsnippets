@@ -37,3 +37,5 @@ const determineWinner = (userChoice,computerChoice) => {
     console.log("ERROR:Verify getComputerChoice or getUserChoice Functions");
   }
 }
+
+console.log(determineWinner(getUserChoice("paper"),getComputerChoice()));
