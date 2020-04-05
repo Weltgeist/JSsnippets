@@ -24,7 +24,7 @@ getSleepHours = day => {
     default:
       break;
   }
-}
+};
 
 getActualSleepHours = () => {
   let days = ["monday","tuesday","wednesday","thursday","friday","saturday","sunday"];
@@ -33,4 +33,8 @@ getActualSleepHours = () => {
     sum+=getSleepHours(days[i]);
   }
   return sum;
-}
+};
+
+getIdealSleepHours = () => {
+
+};
