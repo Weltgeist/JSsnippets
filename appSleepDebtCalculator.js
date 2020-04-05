@@ -9,7 +9,7 @@ getSleepHours = day => {
     case "wednesday":
       return 6;
       break;
-    case "tursday":
+    case "thursday":
       return 6;
       break;
     case "friday":
