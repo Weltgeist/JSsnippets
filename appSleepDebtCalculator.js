@@ -53,3 +53,5 @@ calculateSleepDebt = () => {
     console.log("Sleeping the recommended amount, good for you!");
   } 
 }
+
+calculateSleepDebt();
