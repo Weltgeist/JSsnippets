@@ -25,3 +25,7 @@ getSleepHours = day => {
       break;
   }
 }
+
+getActualSleepHours = () => {
+  
+}
