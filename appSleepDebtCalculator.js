@@ -36,5 +36,6 @@ getActualSleepHours = () => {
 };
 
 getIdealSleepHours = () => {
-
+  let idealHours = 8;
+  return idealHours * 7;
 };
