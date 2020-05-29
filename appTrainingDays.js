@@ -13,7 +13,7 @@ const getRandEvent = () => {
 
 // The scope of `days` is too tight 
 const getTrainingDays = event => {
-  let days = 0;
+  let days ;
   if (event === 'Marathon') {
     let days = 50;
   } else if (event === 'Triathlon') {
