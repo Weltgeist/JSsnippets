@@ -8,4 +8,5 @@ let storyWords = story.split(' ');
 console.log(storyWords.length);
 let betterWords = storyWords.filter(word => !unnecessaryWords.includes(word));
 console.log(betterWords.length);
+console.log(betterWords.filter(word => overusedWords.includes(word)).length);
 
