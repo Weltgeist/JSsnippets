@@ -9,4 +9,11 @@ console.log(storyWords.length);
 let betterWords = storyWords.filter(word => !unnecessaryWords.includes(word));
 console.log(betterWords.length);
 console.log(betterWords.filter(word => overusedWords.includes(word)).length);
+let count = 0;
+for(let i = 0 ; i < betterWords.length ; i++) {
+  if (betterWords[i][betterWords[i].length -1]==='.'|betterWords[i][betterWords[i].length -1]==='!'){
+    count++;
+  }
+}
+console.log(count);
 
