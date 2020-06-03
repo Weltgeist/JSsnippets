@@ -5,3 +5,4 @@ let overusedWords = ['really', 'very', 'basically'];
 let unnecessaryWords = ['extremely', 'literally', 'actually' ];
 
 let storyWords = story.split(' ');
+console.log(storyWords.length)
