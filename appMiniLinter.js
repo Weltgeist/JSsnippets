@@ -16,4 +16,5 @@ for(let i = 0 ; i < betterWords.length ; i++) {
   }
 }
 console.log(count);
+console.log(betterWords.join(' '));
 
