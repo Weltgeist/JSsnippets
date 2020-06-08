@@ -47,5 +47,33 @@ batch.forEach( element => console.log(validateCred(element)));
 const findInvalidCards = narr => narr.filter( arr => !validateCred(arr));
 const findValidCards = narr => narr.filter( arr => validateCred(arr));
 
-console.log(findInvalidCards(batch));
+barr = findInvalidCards(batch);
+console.log(barr);
 
+//Filter out duplicates;
+const uniqArr = arr => arr.filter( (v,i) => arr.indexOf(v) === i) 
+
+const idInvalidCardCompanies = (narr) => {
+  let digiMap = [3, 4, 5, 6];
+  let comMap = ['Amex', 'Visa', 'Mastercard', 'Discover'];
+  let garr = [];
+  let llog = garr.length;
+  //Convert Card Number to Card Companies
+  for (let i = 0; i < narr.length -1; i++) {
+    for (let j = 0; j < digiMap.length -1; j++){
+      if (narr[i][0] === digiMap[j]) {
+        garr.push(comMap[j]);
+        break;
+      }
+    }
+    if (!(garr.length === llog + 1)) {
+      console.log('Company not found');
+    }
+    llog = garr.length ;
+  }
+  //Filter out duplicates
+  garr = uniqArr(garr);
+  return garr;
+}
+
+console.log(idInvalidCardCompanies(barr));
