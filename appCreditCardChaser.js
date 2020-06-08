@@ -25,9 +25,24 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 // Add your functions below:
 
+const validateCred = (arr) => {
+  let sum = arr[arr.length -1];
+  let parity = arr.length % 2 ; // Using parity to verify 
+  for (let i = arr.length-2; i>=0; i-- ) {
+    if (i % 2 === parity) {
+      sum += arr[i] * 2 > 9 ? arr[i] * 2  - 9: arr[i] * 2;
+    } else {
+      sum += arr[i];
+    }
+  }
+  if (sum % 10 === 0) {
+    return true;
+  } else {
+     return false;
+  }
+}
 
-
-
+batch.forEach( element => console.log(validateCred(element)));
 
 
 
