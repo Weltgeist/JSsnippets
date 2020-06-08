@@ -80,4 +80,7 @@ console.log(idInvalidCardCompanies(barr));
 
 const strToCardNumbArr = string => {
   chars = string.split('');
+  return chars.map(element => Number(element));
 };
+
+console.log(strToCardNumbArr('4539677908016808'));
