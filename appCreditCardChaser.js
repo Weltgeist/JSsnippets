@@ -44,9 +44,8 @@ const validateCred = arr => { //https://en.wikipedia.org/wiki/Luhn_algorithm#Des
 
 batch.forEach( element => console.log(validateCred(element)));
 
-const findInvalidCards = nArr => {
-}
+const findInvalidCards = narr => narr.filter( arr => !validateCred(arr));
+const findValidCards = narr => narr.filter( arr => validateCred(arr));
 
-
-
+console.log(findInvalidCards(batch));
 
