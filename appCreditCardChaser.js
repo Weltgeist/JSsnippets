@@ -77,3 +77,7 @@ const idInvalidCardCompanies = (narr) => {
 }
 
 console.log(idInvalidCardCompanies(barr));
+
+const strToCardNumbArr = string => {
+  chars = string.split('');
+};
