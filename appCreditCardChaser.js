@@ -40,7 +40,7 @@ const validateCred = arr => { //https://en.wikipedia.org/wiki/Luhn_algorithm#Des
   } else {
      return false;
   }
-}
+};
 
 batch.forEach( element => console.log(validateCred(element)));
 
@@ -51,7 +51,7 @@ barr = findInvalidCards(batch);
 console.log(barr);
 
 //Filter out duplicates;
-const uniqArr = arr => arr.filter( (v,i) => arr.indexOf(v) === i) 
+const uniqArr = arr => arr.filter( (v,i) => arr.indexOf(v) === i);
 
 const idInvalidCardCompanies = (narr) => {
   let digiMap = [3, 4, 5, 6];
@@ -74,7 +74,7 @@ const idInvalidCardCompanies = (narr) => {
   //Filter out duplicates
   garr = uniqArr(garr);
   return garr;
-}
+};
 
 console.log(idInvalidCardCompanies(barr));
 
