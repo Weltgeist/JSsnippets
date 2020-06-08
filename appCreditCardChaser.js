@@ -25,7 +25,7 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 // Add your functions below:
 
-const validateCred = (arr) => { //https://en.wikipedia.org/wiki/Luhn_algorithm#Description
+const validateCred = arr => { //https://en.wikipedia.org/wiki/Luhn_algorithm#Description
   let sum = arr[arr.length -1];
   let parity = arr.length % 2 ; // Using parity to verify 
   for (let i = arr.length-2; i>=0; i-- ) {
@@ -43,6 +43,9 @@ const validateCred = (arr) => { //https://en.wikipedia.org/wiki/Luhn_algorithm#D
 }
 
 batch.forEach( element => console.log(validateCred(element)));
+
+const findInvalidCards = nArr => {
+}
 
 
 
