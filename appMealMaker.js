@@ -76,3 +76,16 @@ const menu = {
     return `You ordered as an appetizer: ${appetizer.price} \nYou ordered as an main: ${main.price} \nYou ordered as an dessert: ${dessert.price}\nFor a total of: ${sum} CAN Dollars \n`
   }
 };
+
+
+menu.addDishToCourse('appetizers', 'Plantain with assorted spices',3);
+menu.addDishToCourse('appetizers', 'Slice potatoes with garlic dip ',3);
+menu.addDishToCourse('appetizers', 'Kitkat',1);
+menu.addDishToCourse('mains', 'Djondjon rice with chicken', 8);
+menu.addDishToCourse('mains', 'Beans sauce rice with cabri', 15);
+menu.addDishToCourse('mains', 'General tao', 5);
+menu.addDishToCourse('desserts', 'Icecream', 3);
+menu.addDishToCourse('desserts', 'Sugar pie', 2);
+menu.addDishToCourse('desserts', 'Assort fruit boil', 3);
+
+console.log(menu.course);
