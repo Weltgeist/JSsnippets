@@ -30,12 +30,20 @@ const menu = {
     }
 
   },
+  // Add dish to _course depending on courseName, mandatory format include appetizers, mains or dessert in the courseName
   addDishToCourse(courseName,dishName,dishPrice){
     let dish = {
       name: dishName,
       price: dishPrice
     };
-    if (courseName.split(' ').some( element => element ==='appetizers')) {
+    if (courseName === 'appetizers') {
+      this.appetizers.push(dish);
+    }
+    if (courseName === 'mains') {
+      this.mains.push(dish);
+    }
+    if (courseName === 'desserts') {
+      this.desserts.push(dish);
     }
   }
 };
