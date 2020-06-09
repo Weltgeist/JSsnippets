@@ -67,5 +67,8 @@ const menu = {
     } else {
       return dishes[index];
     }
+  },
+  generateRandomMeal(){
+    
   }
 };
