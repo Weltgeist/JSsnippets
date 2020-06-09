@@ -1,3 +1,7 @@
 let menu = {
-  _courses: {}
+  _courses: {
+    appetizers: [],
+    mains: [],
+    dessert: []
+  }
 };
