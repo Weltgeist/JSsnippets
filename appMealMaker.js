@@ -31,6 +31,11 @@ const menu = {
 
   },
   addDishToCourse(courseName,dishName,dishPrice){
-
+    let dish = {
+      name: dishName,
+      price: dishPrice
+    };
+    if (courseName.split(' ').some( element => element ==='appetizers')) {
+    }
   }
 };
