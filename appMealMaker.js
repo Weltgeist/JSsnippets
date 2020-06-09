@@ -1,3 +1,3 @@
 let menu = {
-  _courses = {}
+  _courses: {}
 };
