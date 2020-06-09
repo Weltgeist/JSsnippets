@@ -47,6 +47,17 @@ const menu = {
     }
   },
   getRandomDishFromCourse(courseName){
+    let dishes = [];
+    
+    if (courseName === 'appetizers') {
+      dishes = this.appetizers;
+    }
+    if (courseName === 'mains') {
+      dishes = this.mains;
+    }
+    if (courseName === 'desserts') {
+      dishes = this.desserts;
+    }
 
   }
 };
