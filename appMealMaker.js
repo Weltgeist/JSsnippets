@@ -1,4 +1,4 @@
-let menu = {
+const menu = {
   _courses: {
     appetizers: [],
     mains: [],
@@ -23,6 +23,11 @@ let menu = {
     this.appetizers = dessertChoices;
   },
   get courses(){
+    return {
+      appetizers: this.appetizers,
+      mains: this.mains,
+      desserts: this.desserts
+    }
 
   }
 };
