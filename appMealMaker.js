@@ -1,0 +1,3 @@
+let menu = {
+  _courses = {}
+};
