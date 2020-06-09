@@ -48,6 +48,7 @@ const menu = {
   },
   getRandomDishFromCourse(courseName){
     let dishes = [];
+    let index;
     //Retrive dishes
     if (courseName === 'appetizers') {
       dishes = this.appetizers;
@@ -59,6 +60,12 @@ const menu = {
       dishes = this.desserts;
     }
     //Generate random index
+    index = Math.floor(Math.random()*dishes.length);
     //Return dish
+    if(dishes.length){
+      console.log('Dish is empty, add more dishes');
+    } else {
+      return dishes[index];
+    }
   }
 };
