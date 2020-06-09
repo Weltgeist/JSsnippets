@@ -72,6 +72,8 @@ const menu = {
     let appetizer = getRandomDishFromCourse('appetizers');
     let main = getRandomDishFromCourse('mains');
     let dessert = getRandomDishFromCourse('desserts');
+    let sum = appetizer.price + main.price + dessert.price;
+    return `You ordered as an appetizer: ${appetizer.price} \nYou ordered as an main: ${main.price} \nYou ordered as an dessert: ${dessert.price}\nFor a total of: ${sum} CAN Dollars \n`
     
   }
 };
