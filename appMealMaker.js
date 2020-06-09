@@ -69,6 +69,9 @@ const menu = {
     }
   },
   generateRandomMeal(){
+    let appetizer = getRandomDishFromCourse('appetizers');
+    let main = getRandomDishFromCourse('mains');
+    let dessert = getRandomDishFromCourse('desserts');
     
   }
 };
