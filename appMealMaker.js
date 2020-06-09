@@ -62,16 +62,16 @@ const menu = {
     //Generate random index
     index = Math.floor(Math.random()*dishes.length);
     //Return dish
-    if(dishes.length){
+    if(dishes.length === 0){
       console.log('Dish is empty, add more dishes');
     } else {
       return dishes[index];
     }
   },
   generateRandomMeal(){
-    let appetizer = getRandomDishFromCourse('appetizers');
-    let main = getRandomDishFromCourse('mains');
-    let dessert = getRandomDishFromCourse('desserts');
+    let appetizer = this.getRandomDishFromCourse('appetizers');
+    let main = this.getRandomDishFromCourse('mains');
+    let dessert = this.getRandomDishFromCourse('desserts');
     let sum = appetizer.price + main.price + dessert.price;
     return `You ordered as an appetizer: ${appetizer.price} \nYou ordered as an main: ${main.price} \nYou ordered as an dessert: ${dessert.price}\nFor a total of: ${sum} CAN Dollars \n`
   }
@@ -89,3 +89,6 @@ menu.addDishToCourse('desserts', 'Sugar pie', 2);
 menu.addDishToCourse('desserts', 'Assort fruit boil', 3);
 
 console.log(menu.courses);
+
+let meal = menu.generateRandomMeal();
+console.log(meal);
