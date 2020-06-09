@@ -11,7 +11,7 @@ const menu = {
     return this._courses.mains;
   },
   get desserts(){
-    return this._courses.deserts;
+    return this._courses.desserts;
   },
   set appetizers(appetizerChoices){
     this._courses.appetizers = appetizerChoices;
@@ -20,7 +20,7 @@ const menu = {
     this._courses.mains = mainChoices;
   },
   set desserts(dessertChoices){
-    this._courses.deserts = dessertChoices;
+    this._courses.desserts = dessertChoices;
   },
   get courses(){
     return {
@@ -88,4 +88,4 @@ menu.addDishToCourse('desserts', 'Icecream', 3);
 menu.addDishToCourse('desserts', 'Sugar pie', 2);
 menu.addDishToCourse('desserts', 'Assort fruit boil', 3);
 
-console.log(menu.course);
+console.log(menu.courses);
