@@ -45,5 +45,8 @@ const menu = {
     if (courseName === 'desserts') {
       this.desserts.push(dish);
     }
+  },
+  getRandomDishFromCourse(courseName){
+
   }
 };
