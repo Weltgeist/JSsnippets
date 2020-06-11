@@ -66,3 +66,5 @@ team.addPlayer('Bugs', 'Bunny' , 76);
 team.addGame('Canadian', 50 , 28);
 team.addGame('Broncos', 200 , 44);
 team.addGame('Texas Rangers', 1 , 76);
+console.log(team.players);
+console.log(team.games);
