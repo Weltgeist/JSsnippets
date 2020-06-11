@@ -63,3 +63,6 @@ const team = {
 team.addPlayer('Steph', 'Curry' , 28);
 team.addPlayer('Lisa', 'Leslie' , 44);
 team.addPlayer('Bugs', 'Bunny' , 76);
+team.addGame('Canadian', 50 , 28);
+team.addGame('Broncos', 200 , 44);
+team.addGame('Texas Rangers', 1 , 76);
