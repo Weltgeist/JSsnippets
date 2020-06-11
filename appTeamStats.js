@@ -48,6 +48,14 @@ const team = {
       age: age
     };
     this.players.push(player);
+  },
+  addGame(opponent,teamPoints,opponentPoints){
+    let game = {
+      opponent: opponent,
+      teamPoints: teamPoints,
+      opponentPoints: opponentPoints
+    };
+    this.games.push(game);
   }
 
 };
