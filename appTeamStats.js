@@ -51,3 +51,7 @@ const team = {
   }
 
 };
+
+team.addPlayer('Steph', 'Curry' , 28);
+team.addPlayer('Lisa', 'Leslie' , 44);
+team.addPlayer('Bugs', 'Bunny' , 76);
