@@ -17,5 +17,22 @@ const team = {
     }
 
   ],
-  _games: []
+  _games: [
+    {
+      opponent: 'Broncos',
+      teamPoints: 37,
+      opponentPoints: 22
+    },
+    {
+      opponent: 'Canadian',
+      teamPoints: 42,
+      opponentPoints: 5
+    },
+    {
+      opponent: 'WorldCupFinal',
+      teamPoints: 500,
+      opponentPoints: 499
+    }
+
+  ]
 };
