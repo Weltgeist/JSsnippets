@@ -27,6 +27,22 @@ const returnRandDiffBase = (string) => {
   return dnaBases[Math.floor(Math.random() * 3)];
 };
 
+//Create a number of pAequor who will surive
+const pAequorCreate = num => {
+  let dnaObjArr = [];
+  let n = 1;
+  for (let i = 0 ; i < num; i++){
+    dnaObjArr[i]=pAequorFactory(i,mockUpStrand());
+    while(!dnaObjArr[i].willLikelySurvive()){
+      dnaObjArr[i].mutate();
+      n++;
+    }
+    console.log(n);
+    n=0
+  }
+  return dnaObjArr;
+}
+
 pAequorFactory = (number, arrDNA) => {
   return {
     specimenNum: number,
@@ -69,3 +85,6 @@ dnaObj.compareDNA(dnaObj2);
 let dnaObj3 = pAequorFactory(12, ['G', 'T', 'T', 'C']);
 console.log(dnaObj3.willLikelySurvive());
 
+
+dnaObjArr = pAequorCreate(30);
+dnaObjArr.forEach(elem => console.log(elem.dna));
