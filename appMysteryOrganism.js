@@ -48,6 +48,10 @@ pAequorFactory = (number, arrDNA) => {
       let percent = dnaMatch.length/this.dna.length*100;
       console.log(`Comparing ${this.specimenNum} and ${pAequor.specimenNum}\nMatch is ${dnaMatch} and it's ${percent}% `);
     },
+    /**
+     * check if DNA strand is at least 60% compose of [C,G] base.
+     * @returns {bool} truthy for DNA Match.
+     */
     willLikelySurvive(){
       let dnaMatch = this.dna.filter((a) => ['C','G'].some( b => a === b));
       let percent = dnaMatch.length/this.dna.length*100;
