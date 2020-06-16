@@ -38,7 +38,7 @@ const complementBand = (string) => {
   return complement[index+4];
 }
 //gets complement strands
-const complementStrand = (dnaStrand) => {
+const complementStrand = dnaStrand => {
   return dnaStrand.map(elem => complementBand(elem));
 }
 
@@ -110,6 +110,11 @@ pAequorFactory = (number, arrDNA) => {
 //dnaObj.compareDNA(dnaObj2);
 //let dnaObj3 = pAequorFactory(12, ['G', 'T', 'T', 'C']);
 //console.log(dnaObj3.willLikelySurvive());
+//let dnaObj4 = pAequorFactory(12, ['G', 'T', 'T', 'C']);
+//console.log(dnaObj4.dna);
+//console.log(complementStrand(dnaObj4.dna))
+//dnaObj4.complement();
+//console.log(dnaObj4.dna);
 
 
 dnaObjArr = pAequorCreate(30);
