@@ -13,6 +13,12 @@ const mockUpStrand = () => {
   return newStrand;
 };
 
+pAequorFactory = (number, arrDNA) => {
+  return {
+    specimenNum: number,
+    dna: arrDNA
+  }
+}
 
 
 
