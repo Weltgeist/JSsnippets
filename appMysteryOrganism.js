@@ -31,11 +31,18 @@ pAequorFactory = (number, arrDNA) => {
   return {
     specimenNum: number,
     dna: arrDNA,
+    /**
+     * modifie a random base in pAequor dna strand for another random base.
+     */
     mutate(){
       let dnaBase = returnRandElem(this.dna);
       let dnaBaseNew = returnRandDiffBase(dnaBase[1]);
       this.dna[dnaBase[0]] = dnaBaseNew;
     },
+    /**
+     * calculate matching base between 2 dna strands. 
+     * @param {object} pAequor object with dna
+     */
     compareDNA(pAequor){
       let dnaMatch = this.dna.filter( (elem,index) => pAequor.dna[index] === elem );
       let percent = dnaMatch.length/this.dna.length*100;
