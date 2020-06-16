@@ -38,6 +38,7 @@ const complementBand = (string) => {
   return complement[index+4];
 }
 //gets complement strands
+//ref https://discoveringthegenome.org/discovering-genome/dna-sequencing/dna-complementary-base-pairing
 const complementStrand = dnaStrand => {
   return dnaStrand.map(elem => complementBand(elem));
 }
