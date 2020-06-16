@@ -91,4 +91,4 @@ let dnaObj3 = pAequorFactory(12, ['G', 'T', 'T', 'C']);
 console.log(dnaObj3.willLikelySurvive());
 
 
-dnaObjArr = pAequorCreate(30,1);
+dnaObjArr = pAequorCreate(30);
