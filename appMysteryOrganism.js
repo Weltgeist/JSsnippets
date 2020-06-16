@@ -27,6 +27,21 @@ const returnRandDiffBase = (string) => {
   return dnaBases[Math.floor(Math.random() * 3)];
 };
 
+// gets complement band
+const complementBand = (string) => {
+  const complement = ['A','T','C','G','T','A','G','C'];
+  let index = complement.findIndex(elem => string === elem);
+  if (index === -1) {
+    console.log('Not a elligeable DNA Brand')
+    return;
+  }
+  return complement[index+4];
+}
+//gets complement strands
+const complementStrand = (dnaStrand) => {
+  return dnaStrand.map(elem => complementBand(elem));
+}
+
 //Create a number of pAequor who will surive
 const pAequorCreate = (num,option) => {
   let dnaObjArr = [];
@@ -77,6 +92,12 @@ pAequorFactory = (number, arrDNA) => {
       let dnaMatch = this.dna.filter((a) => ['C','G'].some( b => a === b));
       let percent = dnaMatch.length/this.dna.length*100;
       return percent >= 60;
+    },
+    /**
+     * complement pAequor DNA Strand
+     */
+    complement(){
+      this.dna = complementStrand(this.dna);
     }
   }
 }
