@@ -80,15 +80,15 @@ pAequorFactory = (number, arrDNA) => {
     }
   }
 }
-
-let dnaObj = pAequorFactory(8, ['A', 'T', 'C', 'G']);
-console.log(dnaObj.dna);
-dnaObj.mutate();
-console.log(dnaObj.dna);
-let dnaObj2 = pAequorFactory(10, ['A', 'T', 'C', 'G']);
-dnaObj.compareDNA(dnaObj2);
-let dnaObj3 = pAequorFactory(12, ['G', 'T', 'T', 'C']);
-console.log(dnaObj3.willLikelySurvive());
+//Test
+//let dnaObj = pAequorFactory(8, ['A', 'T', 'C', 'G']);
+//console.log(dnaObj.dna);
+//dnaObj.mutate();
+//console.log(dnaObj.dna);
+//let dnaObj2 = pAequorFactory(10, ['A', 'T', 'C', 'G']);
+//dnaObj.compareDNA(dnaObj2);
+//let dnaObj3 = pAequorFactory(12, ['G', 'T', 'T', 'C']);
+//console.log(dnaObj3.willLikelySurvive());
 
 
 dnaObjArr = pAequorCreate(30);
