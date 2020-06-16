@@ -13,16 +13,35 @@ const mockUpStrand = () => {
   return newStrand;
 };
 
+// Returns a random arr element
+const returnRandElem = (arr) => {
+  let index =Math.floor(Math.random() * arr.length);
+  return [index, arr[index]];
+};
+
+// Returns a random diff DNA base
+const returnRandDiffBase = (string) => {
+  let dnaBases = ['A', 'T', 'C', 'G'];
+  let index = dnaBases.findIndex(elem => elem === string);
+  dnaBases.splice(index,1)
+  return dnaBases[Math.floor(Math.random() * 3)];
+};
+
 pAequorFactory = (number, arrDNA) => {
   return {
     specimenNum: number,
-    dna: arrDNA
+    dna: arrDNA,
+    mutate(){
+      let dnaBase = returnRandElem(this.dna);
+      let dnaBaseNew = returnRandDiffBase(dnaBase[1]);
+      this.dna[dnaBase[0]] = dnaBaseNew;
+    }
   }
 }
 
-
-
-
-
+let dnaObj = pAequorFactory(8, ['A', 'T', 'C', 'G']);
+console.log(dnaObj.dna);
+dnaObj.mutate();
+console.log(dnaObj.dna);
 
 
