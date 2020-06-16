@@ -28,7 +28,7 @@ const returnRandDiffBase = (string) => {
 };
 
 //Create a number of pAequor who will surive
-const pAequorCreate = num => {
+const pAequorCreate = (num,option) => {
   let dnaObjArr = [];
   let n = 1;
   for (let i = 0 ; i < num; i++){
@@ -37,8 +37,13 @@ const pAequorCreate = num => {
       dnaObjArr[i].mutate();
       n++;
     }
-    console.log(n);
+    if (option === 0) {
+      console.log(n);
+    }
     n=0
+  }
+  if (option === 0) {
+    dnaObjArr.forEach(elem => console.log(elem.dna));
   }
   return dnaObjArr;
 }
@@ -86,5 +91,4 @@ let dnaObj3 = pAequorFactory(12, ['G', 'T', 'T', 'C']);
 console.log(dnaObj3.willLikelySurvive());
 
 
-dnaObjArr = pAequorCreate(30);
-dnaObjArr.forEach(elem => console.log(elem.dna));
+dnaObjArr = pAequorCreate(30,1);
