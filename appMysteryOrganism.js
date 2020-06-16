@@ -35,6 +35,11 @@ pAequorFactory = (number, arrDNA) => {
       let dnaBase = returnRandElem(this.dna);
       let dnaBaseNew = returnRandDiffBase(dnaBase[1]);
       this.dna[dnaBase[0]] = dnaBaseNew;
+    },
+    compareDNA(pAequor){
+      let dnaMatch = this.dna.filter( (elem,index) => pAequor.dna[index] === elem );
+      let percent = dnaMatch.length/this.dna.length*100;
+      console.log(`Comparing ${this.specimenNum} and ${pAequor.specimenNum}\nMatch is ${dnaMatch} and it's ${percent}% `);
     }
   }
 }
@@ -43,5 +48,6 @@ let dnaObj = pAequorFactory(8, ['A', 'T', 'C', 'G']);
 console.log(dnaObj.dna);
 dnaObj.mutate();
 console.log(dnaObj.dna);
-
+let dnaObj2 = pAequorFactory(10, ['A', 'T', 'C', 'G']);
+dnaObj.compareDNA(dnaObj2);
 
