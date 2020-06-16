@@ -47,6 +47,11 @@ pAequorFactory = (number, arrDNA) => {
       let dnaMatch = this.dna.filter( (elem,index) => pAequor.dna[index] === elem );
       let percent = dnaMatch.length/this.dna.length*100;
       console.log(`Comparing ${this.specimenNum} and ${pAequor.specimenNum}\nMatch is ${dnaMatch} and it's ${percent}% `);
+    },
+    willLikelySurvive(){
+      let dnaMatch = this.dna.filter((a) => ['C','G'].some( b => a === b));
+      let percent = dnaMatch.length/this.dna.length*100;
+      return percent >= 60;
     }
   }
 }
@@ -57,4 +62,6 @@ dnaObj.mutate();
 console.log(dnaObj.dna);
 let dnaObj2 = pAequorFactory(10, ['A', 'T', 'C', 'G']);
 dnaObj.compareDNA(dnaObj2);
+let dnaObj3 = pAequorFactory(12, ['G', 'T', 'T', 'C']);
+console.log(dnaObj3.willLikelySurvive());
 
