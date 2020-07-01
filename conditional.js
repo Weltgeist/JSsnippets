@@ -1,3 +1,9 @@
+const raining = true;
+
+if (raining) {
+  console.log("Don't forget your umbrella!");
+}
+
 const temperature = 12;
 
 if (temperature < 0) {
